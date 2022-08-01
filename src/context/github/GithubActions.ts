@@ -21,7 +21,7 @@ export const searchUsers = async (text: string) => {
 export const getUserAndRepos = async (username: string | undefined) => {
     const [user, repos] = await Promise.all([
         github.get(`/users/${username}`),
-        github.get(`/users/${username}/repos`),
+        github.get(`/users/${username}/repos?sort=created_at`),
     ]);
 
     return { user: user.data, repos: repos.data };
