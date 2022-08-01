@@ -1,4 +1,7 @@
+// Packages
 import axios from 'axios';
+
+// ENVIRONMENT VARIABLES
 const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
